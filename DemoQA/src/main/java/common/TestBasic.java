@@ -39,7 +39,7 @@ public class TestBasic {
 
 	public void zoomOut() {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("document.body.style.zoom = '50%'");
+		js.executeScript("document.body.style.zoom = '90%'");
 	}
 
 	public void maxmize() {
