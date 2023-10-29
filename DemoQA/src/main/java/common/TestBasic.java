@@ -32,6 +32,10 @@ public class TestBasic {
 		driver.quit();
 		// tab(window).close()
 	}
+	public String getTextByLocator(By locator) {
+		String text = driver.findElement(locator).getText();
+		return text;
+	}
 
 	public void closeCurrwnWindows() {
 		driver.close();
@@ -39,7 +43,7 @@ public class TestBasic {
 
 	public void zoomOut() {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("document.body.style.zoom = '90%'");
+		js.executeScript("document.body.style.zoom = '60%'");
 	}
 
 	public void maxmize() {
@@ -67,16 +71,17 @@ public class TestBasic {
 
 	}
 
-//	public void inputDrow(String radioLabel) {
-//		String rdXpath = "/" + radioLabel + "']";
-//		By rdElement = By.xpath(rdXpath);
-//		driver.findElement(rdElement).sendKeys(rdXpath);
-//
-//	}
+
 	public void keysEnter(By locator) {
 		driver.findElement(locator).sendKeys(Keys.ENTER);
 	}
 
+	public WebElement findLocator(String value) {
+		String rdXpath = "//*[text()='" + value + "']";
+		By rdElement = By.xpath(rdXpath);
+		WebElement element =driver.findElement(rdElement);
+		return element;
+	}
 	public void clickRadioButtonByLabel(String radioLabel) {
 		String rdXpath = "//*[text()='" + radioLabel + "']";
 		By rdElement = By.xpath(rdXpath);

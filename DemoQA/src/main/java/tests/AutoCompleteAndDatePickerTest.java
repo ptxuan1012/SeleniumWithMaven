@@ -7,7 +7,7 @@ import pages.HomePage;
 import pages.WidgetPage;
 
 public class AutoCompleteAndDatePickerTest extends TestCase {
-	// @Test
+	@Test
 	public void doTC01() {
 		HomePage homePage = new HomePage(testBasic.driver);
 		homePage.testBasic.maxmize();
@@ -24,7 +24,7 @@ public class AutoCompleteAndDatePickerTest extends TestCase {
 		autoComple.testBasic.keysEnter(autoComple.txtSing);
 	}
 
-	@Test
+	//@Test
 	public void doTC02() {
 		HomePage homePage = new HomePage(testBasic.driver);
 		homePage.testBasic.maxmize();

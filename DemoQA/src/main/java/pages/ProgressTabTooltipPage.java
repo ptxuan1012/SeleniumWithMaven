@@ -8,8 +8,8 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class ProgressPage extends Page{
-	public ProgressPage(WebDriver dr) {
+public class ProgressTabTooltipPage extends Page{
+	public ProgressTabTooltipPage(WebDriver dr) {
 		super(dr);
 	}
 	public By btnStart =By.id("startStopButton");
@@ -19,14 +19,14 @@ public class ProgressPage extends Page{
 	public By btnStart1 = By.xpath("//button[text()='Start']");
 	
 	public By tab1 = By.id("demo-tab-what");
-	public By tab22 = By.xpath("//a[text()='Origin']");
 	public By tab2 = By.id("demo-tab-origin");
 	public By tab3 = By.id("demo-tab-use");
 	public By textTab1 = By.id("demo-tabpane-what");
 	public By textTab2 = By.id("demo-tabpane-origin");
 	public By textTab3 = By.id("demo-tabpane-use");
-	public By btnToolTip = By.id("toolTipButton");
 	
+	public By btnToolTip = By.id("toolTipButton");
+	public By hvToolTip = By.xpath("//div[@id='buttonToolTip']//following::div");
 	
 	
 	public void clickStartandStopandRest(String radioLabel) {

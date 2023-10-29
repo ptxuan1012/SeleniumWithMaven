@@ -14,10 +14,22 @@ public class WidgetPage extends Page{
 	public By menuProgress =By.xpath("//span[text()='Progress Bar']");
 	public By menuTabs =By.xpath("//span[text()='Tabs']");
 	public By menuToolTips =By.xpath("//span[text()='Tool Tips']");
+	public By menuMenu =By.xpath("//span[text()='Menu']");
+	public By menuSelectMenu =By.xpath("//span[text()='Select Menu']");
+
+	public SelectMenuPage clickSelectMenuPage() {
+		driver.findElement(menuSelectMenu).click();
+		return new SelectMenuPage(driver);
+	}
 	
-	public ProgressPage clickProgess(By locator) {
+	public MenuPage clickMenuPage(By locator) {
 		driver.findElement(locator).click();
-		return new ProgressPage(driver);
+		return new MenuPage(driver);
+	}
+	
+	public ProgressTabTooltipPage clickProgess(By locator) {
+		driver.findElement(locator).click();
+		return new ProgressTabTooltipPage(driver);
 	}
 	
 	public AccordianPages clickAccordian() {
