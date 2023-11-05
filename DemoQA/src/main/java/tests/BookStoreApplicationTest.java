@@ -30,14 +30,13 @@ public class BookStoreApplicationTest extends TestCase {
 		loginPage.testBasic.inputText(loginPage.txtPass, pass);
 		Thread.sleep(1000);
 		loginPage.testBasic.scrollToElement(loginPage.findElementByLocator(loginPage.btnLogin));
-		
-		 ProfilePage profilePage = loginPage.clickProfilePage(); 
-		 testBasic.driver.switchTo().defaultContent();
-		 
-		 String expected ="Profile";
-		 String actualed = profilePage.isDiplay();
-		 System.out.println(actualed);
-		 assertEquals(actualed, expected);		 
+		ProfilePage profilePage = loginPage.clickProfilePage();
+		WebElement e = profilePage.findElementByLocator(profilePage.textFormProfile);
+		testBasic.driver.switchTo().equals(e);
+		String expected = "Profile";
+		String actualed = profilePage.isDiplay();
+		System.out.println(actualed);
+		assertEquals(actualed, expected);
 	}
 
 	@DataProvider(name = "LoginData") // giup mapping du lieu voi test case chạy
