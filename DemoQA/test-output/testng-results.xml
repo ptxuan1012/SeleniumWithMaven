@@ -1,21 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-10-28T20:45:09 PDT" name="Default suite" finished-at="2023-10-28T20:45:56 PDT" duration-ms="47315">
+  <suite started-at="2023-11-04T20:54:16 PDT" name="Default suite" finished-at="2023-11-04T20:54:35 PDT" duration-ms="18217">
     <groups>
     </groups>
-    <test started-at="2023-10-28T20:45:09 PDT" name="Default test" finished-at="2023-10-28T20:45:56 PDT" duration-ms="47315">
-      <class name="tests.InteractionsTest">
-        <test-method is-config="true" signature="openWebsite()[pri:0, instance:tests.InteractionsTest@6e9175d8]" started-at="2023-10-28T20:45:09 PDT" name="openWebsite" finished-at="2023-10-28T20:45:52 PDT" duration-ms="42542" status="PASS">
+    <test started-at="2023-11-04T20:54:16 PDT" name="Default test" finished-at="2023-11-04T20:54:35 PDT" duration-ms="18217">
+      <class name="tests.BookStoreApplicationTest">
+        <test-method is-config="true" signature="openWebsite()[pri:0, instance:tests.BookStoreApplicationTest@2a7f1f10]" started-at="2023-11-04T20:54:19 PDT" name="openWebsite" finished-at="2023-11-04T20:54:29 PDT" duration-ms="10738" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openWebsite -->
-        <test-method signature="Resizeable()[pri:0, instance:tests.InteractionsTest@6e9175d8]" started-at="2023-10-28T20:45:52 PDT" name="Resizeable" finished-at="2023-10-28T20:45:56 PDT" duration-ms="4661" status="PASS">
+        <test-method signature="SummitLogin(java.lang.String,java.lang.String)[pri:0, instance:tests.BookStoreApplicationTest@2a7f1f10]" started-at="2023-11-04T20:54:29 PDT" name="SummitLogin" description="TC01-Submit data successfully" data-provider="LoginData" finished-at="2023-11-04T20:54:34 PDT" duration-ms="4632" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Autotest]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Az12345@]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [Profile] but found [Login]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [Profile] but found [Login]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at org.testng.Assert.assertEquals(Assert.java:666)
+at tests.BookStoreApplicationTest.SummitLogin(BookStoreApplicationTest.java:40)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Resizeable -->
-      </class> <!-- tests.InteractionsTest -->
+        </test-method> <!-- SummitLogin -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:tests.BookStoreApplicationTest@2a7f1f10]" started-at="2023-11-04T20:54:34 PDT" name="closeBrowser" finished-at="2023-11-04T20:54:35 PDT" duration-ms="625" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- tests.BookStoreApplicationTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

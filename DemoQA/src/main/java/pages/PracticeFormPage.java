@@ -22,6 +22,13 @@ public class PracticeFormPage extends Page {
 	String selectYear = "//option[text()='@params']";
 	String selectMonth = "//option[text()='@params']";
 	String selectDays = "//div[text()='@params']";
+	By txtUploadPicture = By.id("uploadPicture");
+	
+	public void inputUploadPicture() {
+		driver.findElement(txtUploadPicture)
+				.sendKeys(System.getProperty("user.dir") + "/src\\main\\resources\\Image\\Xuan.jpg");
+	}
+	
 	 public void intBOD(String year, String month, String day) {
 		 driver.findElement(txtDOB).click();
 		 selectYear(year);

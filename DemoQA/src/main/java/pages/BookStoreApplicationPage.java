@@ -16,7 +16,7 @@ public class BookStoreApplicationPage extends Page{
 		return new LoginPage(driver);
 	}
 	public BookStoryPage clickMenuBookStory() {
-		driver.findElement(menuLogin).click();
+		driver.findElement(menuBookstore).click();
 		return new BookStoryPage(driver);
 	}
 

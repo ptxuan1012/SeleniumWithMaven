@@ -3,12 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="tests.InteractionsTest">
+      <class name="tests.BookStoreApplicationTest">
         <methods>
           <include name="openWebsite"/>
-          <include name="Resizeable"/>
+          <include name="SummitLogin" invocation-numbers="0"/>
+          <include name="closeBrowser"/>
         </methods>
-      </class> <!-- tests.InteractionsTest -->
+      </class> <!-- tests.BookStoreApplicationTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

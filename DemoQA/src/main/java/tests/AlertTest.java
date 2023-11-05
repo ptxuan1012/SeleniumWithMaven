@@ -15,7 +15,7 @@ import pages.HomePage;
 
 public class AlertTest extends TestCase {
 	// TC1: Click Button to see alert
-//	@Test
+	@Test(groups = {"AlertTest"})
 	public void doTC01() {
 		HomePage homePage = new HomePage(testBasic.driver);
 		homePage.testBasic.maxmize();
@@ -31,7 +31,7 @@ public class AlertTest extends TestCase {
 	}
 
 // TC2: On button click, alert will appear after 5 seconds
-	// @Test
+	@Test(groups = {"AlertTest"})
 	public void doTC02() {
 		HomePage homePage = new HomePage(testBasic.driver);
 		homePage.testBasic.maxmize();
@@ -74,7 +74,7 @@ public class AlertTest extends TestCase {
 
 	}
 	// TC4: On button click, prompt box will appear
-	@Test
+	//@Test
 	public void doTC04() {
 		HomePage homePage = new HomePage(testBasic.driver);
 		homePage.testBasic.maxmize();

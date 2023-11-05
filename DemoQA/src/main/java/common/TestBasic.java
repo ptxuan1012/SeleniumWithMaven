@@ -9,7 +9,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-
+//tất các các hàm common cho selenium
 public class TestBasic {
 	public WebDriver driver;
 
@@ -43,7 +43,7 @@ public class TestBasic {
 
 	public void zoomOut() {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("document.body.style.zoom = '60%'");
+		js.executeScript("document.body.style.zoom = '70%'");
 	}
 
 	public void maxmize() {

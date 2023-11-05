@@ -26,7 +26,9 @@ public class TextBoxTest extends TestCase {
 	public void doTC02() {
 		// Click vào phần tử Element trên trang Home
 		HomePage homePage = new HomePage(testBasic.driver);
-
+		homePage.testBasic.maxmize();
+		homePage.testBasic.zoomOut();
+		homePage.scrollToElement(homePage.menuElementsXpath);
 		// Click vào phần tử Textbox
 		ElementsPage elementsPage = homePage.clickElements();
 		elementsPage.clickTextBoxMenu();

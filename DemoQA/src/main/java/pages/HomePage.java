@@ -13,6 +13,11 @@ public class HomePage extends Page{
 	public By menuInteraction = By.xpath("//*[text()='Interactions']");
 	public By menuBookStore = By.xpath("//h5[text()='Book Store Application']");
 	
+	public void scrollToElement(By locator) {
+		WebElement element =driver.findElement(locator);
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].scrollIntoView(true)", element);
+	}
 	public BookStoreApplicationPage clickBookStore() {
 		driver.findElement(menuBookStore).click();
 		return new BookStoreApplicationPage(driver);
